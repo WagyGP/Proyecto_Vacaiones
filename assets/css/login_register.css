@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; 
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.caja_principal {
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow:  0 4px 30px rgba(0, 0, 0, 0.1); 
+    padding: 40px; 
+    width: 400px; 
+}
+
+.titulos_cajas {
+    font-size: 26px; 
+    font-weight: bold; 
+    color: #343a40; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.label_inicio {
+    display: block;
+    margin-top: 15px; 
+    color: #495057; 
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    width: calc(100% - 20px); 
+    padding: 12px; 
+    margin-top: 8px; 
+    border-radius: 5px; 
+    border: 1px solid #ced4da; 
+    transition: border-color 0.3s ease; 
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+   border-color: #007bff; 
+   outline: none; 
+}
+
+.botones_cajas {
+   width: 100%; 
+   padding: 12px; 
+   background-color: #007bff; 
+   color: white; 
+   border: none; 
+   border-radius: 5px; 
+   cursor: pointer; 
+   font-size: 16px; 
+   transition: background-color 0.3s ease; 
+}
+
+.botones_cajas:hover {
+   background-color: #0056b3; 
+}
+
+p {
+   text-align: center;
+   margin-top: 15px; 
+   color: #6c757d; 
+}
+
+a {
+   color: #007bff; 
+   text-decoration: none; 
+}
+
+a:hover {
+   text-decoration: underline; 
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center; 
+    margin-top: 10px; 
+}
+
+.caja_recuperar_cuenta {
+    display: flex;
+    flex-direction: column; 
+}
+
+.caja_recuperar_cuenta input[type=email] {
+    margin-bottom: 20px; 
+}
+
+.caja_recuperar_cuenta .botones_cajas {
+    margin-top: 30px; 
+}

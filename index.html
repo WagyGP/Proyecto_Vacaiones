@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="assets/css/login_register.css">
+</head>
+<body>
+    
+    <main>
+        <div class="caja_principal">
+            <div class="caja_inicio_sesion" id="caja_inicio_sesion">
+                <h2 class="titulos_cajas">Iniciar Sesión</h2>
+                <form action="php/login.php" method="POST" id="formulario_inicio">
+                    <label class="label_inicio" for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" aria-label="Usuario" required>
+
+                    <label class="label_inicio" for="contraseña_login">Contraseña</label>
+                    <input type="password" name="contraseña_login" id="contraseña_login" required>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="recordar_sesion" id="recordar_sesion">
+                        <label id="recordar_inicio" for="recordar_sesion">Recuérdame</label>
+                    </div>
+
+                    <button class="botones_cajas" type="submit">Iniciar Sesión</button>
+
+                    <p>¿Aún no te has creado una cuenta? Ingresa <a href="#" onclick="mostrarRegistro()">aquí</a> para registrarte.</p>
+                    <p>¿No recuerdas tu contraseña? Ingresa <a href="#" onclick="mostrarRecuperacion()">aquí</a></p>
+                </form>
+            </div>
+
+            <div class="caja_registro" id="caja_registro" style="display: none;">
+                <h2 class="titulos_cajas">Registrarte</h2>
+                <form action="php/register.php" method="POST" id="formulario_registro">
+                    <label for="nombre_completo">Nombre completo</label>
+                    <input type="text" name="nombre_completo" id="nombre_completo" required>
+
+                    <label for="apellido_completo">Apellido completo</label>
+                    <input type="text" name="apellido_completo" id="apellido_completo" required>
+
+                    <label for="correo_cuenta">Correo electrónico</label>
+                    <input type="email" name="correo_cuenta" id="correo_cuenta" required>
+
+                    <label for="contraseña_cuenta">Contraseña</label>
+                    <input type="password" name="contraseña_cuenta" id="contraseña_cuenta" required>
+
+                    <button class="botones_cajas" type="submit">Registrarse</button>
+                    
+                    <p>¿Ya tienes una cuenta? Ingresa <a href="#" onclick="mostrarInicioSesion()">aquí</a> para iniciar sesión.</p>
+                </form>
+            </div>
+
+            <div class="caja_recuperar_cuenta" id="caja_recuperar_cuenta" style="display: none;">
+                <h2 class="titulos_cajas">Recuperar cuenta</h2>
+                <form action="" id="formulario_recuperacion">
+                    <label for="correo_recuperacion">Indique el correo electrónico para recuperar su cuenta</label>
+                    <input type="email" name="correo_recuperacion" id="correo_recuperacion" required>
+
+                    <div class="checkbox-container">
+                        <input type='checkbox' name='recordar_sesion' id='recordar_sesion_recuperacion'>
+                        <label for='recordar_sesion_recuperacion'>Recuérdame</label>
+                    </div>
+
+                    <button class='botones_cajas' type='submit'>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src='assets/js/inicio_funciones.js'></script>
+</body>
+</html>
